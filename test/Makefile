@@ -6,7 +6,11 @@ SIM ?= icarus
 FST ?= -fst # Use more efficient FST format
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = project.v
+PROJECT_SOURCES = \
+	tt_um-gps_daily_trigger.sv \
+	uart_rx_compact.sv \
+	nmea_rmc_time_parser.sv \
+	gps_daily_trigger_core.sv
 
 ifneq ($(GATES),yes)
 
