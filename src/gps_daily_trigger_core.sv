@@ -216,7 +216,7 @@ module gps_daily_trigger_core #(
     assign gps_data_bad_o    = gps_bad_sticky_q;
     assign gps_fix_invalid_o = fix_invalid_sticky_q;
     assign config_error_o    = config_error_sticky_q;
-    assign pps_tick_o        = pps_rise;
+    assign pps_tick_o = pps_sync_q;
     assign pps_seen_o        = pps_seen_q;
     assign time_locked_o     = time_locked_q;
     assign armed_o           = armed_q;
